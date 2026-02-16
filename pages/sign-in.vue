@@ -5,14 +5,6 @@
 			class="absolute right-4 top-4 flex h-6 items-center justify-center gap-x-4 transition-all md:right-8 md:top-8"
 		>
 			<dark-button />
-			<theme-select />
-			<NuxtLink
-				v-if="structure.authentication.custom"
-				to="/forgot-password"
-				:class="cn(buttonVariants({ variant: 'ghost' }))"
-			>
-				Forgot Password?
-			</NuxtLink>
 			<NuxtLink
 				to="/sign-up"
 				:class="cn(buttonVariants({ variant: 'ghost' }))"
@@ -110,7 +102,8 @@ const schema = z.object({
 		}),
 })
 
-function onSubmit(values: Record<string, any>) {
+const auth = useAuthManager()
+async function onSubmit(values: Record<string, any>) {
 	createToast({
 		message: 'You submitted the following values:',
 		toastOps: {
@@ -125,5 +118,11 @@ function onSubmit(values: Record<string, any>) {
 			),
 		},
 	})()
+
+	await auth.signIn({
+		identifier: values.email,
+		password: values.password,
+	})
+	await navigateTo('/profile')
 }
 </script>

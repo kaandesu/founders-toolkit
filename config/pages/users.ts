@@ -1,12 +1,12 @@
 import type { Page } from '~/types/config'
 export const Users = ref<Page>({
-	title: 'Users',
-	uid: 'users',
+	title: 'Network',
+	uid: 'network',
 	label: '',
-	href: '/users',
+	href: '/network',
 	icon: 'ci:users',
 	isCollapsed: true,
-	tourDesc: 'Manage user accounts and their permissions.',
+	tourDesc: 'View your your co-founder network',
 	sidebarSeperator: true,
 	layout: 'dashboard-page',
 })

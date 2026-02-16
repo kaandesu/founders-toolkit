@@ -37,6 +37,10 @@ export default defineNuxtConfig({
 	typescript: {
 		typeCheck: false,
 	},
+	devServer: {
+		port: 3131,
+		host: '0.0.0.0',
+	},
 	vite: {
 		server: {
 			watch: {

@@ -1,5 +1,8 @@
 <template>
-	<main class="h-full w-full">Trucks here</main>
+	<main class="h-full w-full">
+		Profile here
+		<br />
+	</main>
 </template>
 
 <script setup lang="ts">

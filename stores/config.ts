@@ -11,7 +11,7 @@ export const useConfigStore = defineStore(
 		const structureRef = ref<{ authentication: AuthenticationStructure }>({
 			authentication: {
 				custom: true,
-				providers: ['google', 'github'],
+				providers: [],
 				tosAndPrivacy: {
 					required: true,
 					tos: 'https://github.com/kaandesu/',
@@ -25,22 +25,17 @@ export const useConfigStore = defineStore(
 		// the pages are meant to be on the sidebar
 		// should be generated
 		const sidebar = ref<DashboardConfig>({
-			title: 'Kaan Dashboard',
-			desc: 'Modular Dashboard',
-			logo: 'https://avatar.vercel.sh/0.svg',
+			title: 'FoundMe',
+			desc: 'Found your Co-founder',
+			logo: 'https://github.com/kaandesu/testrepo/blob/main/WhatsApp%20Image%202026-02-16%20at%2015.38.40.jpeg?raw=true',
 			logoFallback: 'K',
 			pages: [
-				p.Dashboard.value,
-				p.Tasks.value,
+				p.Explore.value,
+				p.Profile.value,
+				p.LookingFor.value,
 				p.Chats.value,
-				p.Apps.value,
-				p.Authentication.value,
+				// p.Apps.value,
 				p.Users.value,
-				p.Requests.value,
-				p.Analysis.value,
-				p.ExtraComponents.value,
-				p.ErrorPages.value,
-				p.Tour.value,
 				p.Settings.value,
 			],
 		})

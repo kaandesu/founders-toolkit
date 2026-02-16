@@ -77,7 +77,6 @@
 		"vee-validate": "^4.14.7",
 		"zod": "^3.23.8"
 	},
-	"packageManager": "pnpm@9.5.0",
 	"overrides": {
 		"vue": "latest"
 	}

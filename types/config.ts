@@ -31,6 +31,7 @@ export type CommandGroup = {
 export type Page = {
 	title?: string
 	uid: string
+	hideTitle?: boolean
 	label?: string
 	href?: string
 	icon?: string

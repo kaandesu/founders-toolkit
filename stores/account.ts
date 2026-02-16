@@ -29,6 +29,27 @@ export const useAccountStore = defineStore(
 			avatarFallback: 'KD',
 		})
 
+		const preferences = ref({
+			roleNeeded: '',
+			radar: {
+				tech: 0,
+				business: 0,
+				product: 0,
+				sales: 0,
+				ops: 0,
+			},
+			stage: '',
+			commitment: '',
+			location: '',
+			hardSkills: [] as string[],
+			softTraits: [] as string[],
+			industries: [] as string[],
+			riskTolerance: '',
+			speed: '',
+			decisionStyle: '',
+			equityPhilosophy: '',
+		})
+
 		const contextOptions = ref<{
 			commandGroups?: CommandGroup[]
 			contextOptionGroups: ContextOptionGroup[]
@@ -68,11 +89,11 @@ export const useAccountStore = defineStore(
 			],
 		})
 
-		return { account, contextOptions }
+		return { account, contextOptions, preferences }
 	},
 	{
 		persist: {
-			paths: [''],
+			pick: ['preferences'],
 		},
 	},
 )

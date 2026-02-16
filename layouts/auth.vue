@@ -10,8 +10,11 @@
 				to="/"
 				class="ml-8 mt-10 flex items-center justify-start gap-x-3"
 			>
-				<Avatar v-if="sidebar.logo" class="h-6 w-6 rounded">
-					<AvatarImage :src="sidebar.logo"></AvatarImage>
+				<Avatar v-if="sidebar.logo" class="h-6 w-6 rounded border-none">
+					<AvatarImage
+						class="border-none"
+						:src="sidebar.logo"
+					></AvatarImage>
 				</Avatar>
 				{{ sidebar.title }}
 			</NuxtLink>

@@ -1,10 +1,10 @@
 import type { Page } from '~/types/config'
 export const Chats = ref<Page>({
-	title: 'Chats',
-	uid: 'chats',
+	title: 'Matches',
+	uid: 'matches',
 	label: '9',
-	href: '/chats',
+	href: '/matches',
 	icon: 'ph:chats',
-	tourDesc: 'View and engage in your chat conversations.',
+	tourDesc: 'View and engage with your co-founder candidates.',
 	layout: 'dashboard-page',
 })
