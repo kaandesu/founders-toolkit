@@ -38,7 +38,7 @@ export default defineNuxtConfig({
 		typeCheck: false,
 	},
 	devServer: {
-		port: 3131,
+		port: 7125,
 		host: '0.0.0.0',
 	},
 	vite: {
