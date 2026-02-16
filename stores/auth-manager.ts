@@ -5,8 +5,8 @@ interface ApiResponseGeneric<T> {
 	message: string
 }
 
-// const apiBaseUrl = 'https://founders-api-test.yomuhoudai.club'
-const apiBaseUrl = 'http://localhost:8313'
+const apiBaseUrl = 'https://founders-api-test.yomuhoudai.club'
+// const apiBaseUrl = 'http://localhost:8313'
 
 export type UserAccount = {
 	email: string
